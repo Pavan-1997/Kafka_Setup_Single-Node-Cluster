@@ -231,6 +231,8 @@ cd /kafka/bin
 ./kafka-topics.sh --bootstrap-server 127.0.0.1:9092 --create --topic TestTopic --replication-factor 1 --partitions 2 
 ```
 
+![KAFKA_TOPIC_CREATE](https://github.com/Pavan-1997/Kafka_Setup_Single-Node-Cluster/assets/32020205/91052aed-cd99-45b9-bd4e-49a584506b63)
+
 
 15. To list the topics
 
