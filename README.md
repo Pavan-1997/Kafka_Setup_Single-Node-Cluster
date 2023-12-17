@@ -249,6 +249,8 @@ cd /kafka/bin
 ./kafka-console-producer.sh --broker-list 127.0.0.1:9092 --topic TestTopic
 ```
 
+![KAFKA_PRODUCE_MESSAGES](https://github.com/Pavan-1997/Kafka_Setup_Single-Node-Cluster/assets/32020205/a673c535-aafe-4fac-b680-bc18feba2933)
+
 
 17. To consume those messages
     
