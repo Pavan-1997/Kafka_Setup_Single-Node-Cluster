@@ -89,7 +89,7 @@ maxClientCnxns=0
 ```
 
    Use below copy commands to do for other Zookkeeper instances but chnage happens in dataDir and clientPort fields
-
+   
 ```
 cp zookeeper1.properties zookeeper2.properties
 ```
