@@ -19,7 +19,7 @@ wget https://downloads.apache.org/kafka/3.6.1/kafka_2.13-3.6.1.tgz (Binary)
 ```
 
 
-3. Extract the tar file and Rename It for ease of access
+3. Extract the tar file and Rename it for ease of access
    
 ```
 tar -xvf kafka-3.6.1-src.tgz
@@ -46,7 +46,7 @@ cp zookeeper1.properties zookeeper3.properties
 
 
 5. Create the data directory for all the 3 Zookeeper instance to store the data
-
+`WD - Working Directory`
 ```
 mkdir -p /WD/kafka/data/zookeeper1
 ```
@@ -58,10 +58,12 @@ mkdir -p /WD/kafka/data/zookeeper3
 ```
 
 
-6. Creating the unique  id for each Zookeeper instance
+6. Creating the unique id for each Zookeeper instance
 
+```
 echo 1 > /WD/kafka/data/zookeeper1/myid
-
+```
+```
 echo 2 > /WD/kafka/data/zookeeper2/myid
 
 echo 3 > /WD/kafka/data/zookeeper3/myid
