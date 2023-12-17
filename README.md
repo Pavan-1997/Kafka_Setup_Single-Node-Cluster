@@ -125,6 +125,8 @@ nc -v localhost 2182
 nc -v localhost 2183
 ```
 
+![ZOOKEEPER_START](https://github.com/Pavan-1997/Kafka_Setup_Single-Node-Cluster/assets/32020205/b4e8a480-a4b1-4a96-8f1e-fe1ddfa43cae)
+
 Also use below to check
 
 ```
