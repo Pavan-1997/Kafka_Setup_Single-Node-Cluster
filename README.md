@@ -97,35 +97,47 @@ cp zookeeper1.properties zookeeper2.properties
 cp zookeeper1.properties zookeeper3.properties
 ```
 
-Start the Zookeeper
-
+8. Start the Zookeeper
+   
+```
 cd ~/kafka/bin
-
+```
+```
 ./zookeeper-server-start.sh -daemon /kafka/config/zookeeper1.properties
-
+```
+```
 ./zookeeper-server-start.sh -daemon /kafka/config/zookeeper2.properties
-
+```
+```
 ./zookeeper-server-start.sh -daemon /kafka/config/zookeeper3.properties
+```
 
 
-To check Zookeeper running
+9. To check Zookeeper running
 
+```
 nc -v localhost 2181
-
+```
+```
 nc -v localhost 2182
-
+```
+```
 nc -v localhost 2183
-
+```
 
 Also use below to check
 
+```
 ps -ef | grep -i zookeeper 
+```
 
 
-Create Zookeeper as a service
+10. Create Zookeeper as a service
 
+```
 sudo vi /usr/lib/systemd/system/zookeeper1.service
-
+```
+```
 [Unit]
 Description=Zookeeper1 Service
 
@@ -145,17 +157,23 @@ Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
-
-
+```
+```
 systemctl daemon-reload
-
+```
+```
 systemctl enable zookeeper1.service
-
+```
+```
 systemctl start zookeeper1.service
-
+```
+```
 systemctl status zookeeper1.service
-
+```
+```
 systemctl stop zookeeper1.service
+```
+```
 
 Similarily create service for Zookeeper2 and Zookeeper3
 
