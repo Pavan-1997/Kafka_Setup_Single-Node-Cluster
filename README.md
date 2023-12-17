@@ -2,9 +2,11 @@
 
 ## We will be using 3 Zookeepers and 1 Kafka servers in this setup 
 
-Install Java
-
+1. Install Java
+   
+```
 sudo apt install default-jre
+```
 
 Producer - Subscriber
 
