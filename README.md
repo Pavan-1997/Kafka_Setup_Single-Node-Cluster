@@ -214,6 +214,8 @@ cd /kafka/bin/
 ./kafka-server-start.sh -daemon /kafka/config/server.properties
 ```
 
+![KAFKA_START](https://github.com/Pavan-1997/Kafka_Setup_Single-Node-Cluster/assets/32020205/f98af635-4440-4e6f-9bf9-dbd6eeeb79ad)
+
 
 13. To check Kafka running
 
