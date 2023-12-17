@@ -173,56 +173,78 @@ systemctl status zookeeper1.service
 ```
 systemctl stop zookeeper1.service
 ```
-```
+ 
 
 Similarily create service for Zookeeper2 and Zookeeper3
 
 
-Now configure the Kafka 
+11. Now configure the Kafka using the server properties file by modifying below parameters prior create a directory for `kafka-logs`
 
+```
+cd /kafka/data/
+```
+```
+mkdir kafka-logs
+```
+```
 cd /kafka/config/
-
+```
+```
 vi server.properties
+```
+
+`listeners=PLAINTEXT://0.0.0.0:9092`
+
+`advertised.listeners=PLAINTEXT://localhost:9092`
+
+`log.dirs=/kafka/data/kafka-logs`
+
+`zookeeper.connect=localhost:2181, localhost:2182, localhost:2183`
 
 
-listeners=PLAINTEXT://0.0.0.0:9092
+12. Start the Kafka server
 
-advertised.listeners=PLAINTEXT://localhost:9092
-
-log.dirs=/kafka/data/kafka-logs
-
-zookeeper.connect=localhost:2181, localhost:2182, localhost:2183
-
-
-
+```
 cd /kafka/bin/
-
-./kafka-server-start.sh /kafka/config/server.properties
-
+```
+```
 ./kafka-server-start.sh -daemon /kafka/config/server.properties
+```
 
+
+13. To check Kafka running
+
+```
 nc -v localhost 9092
+```
 
 
+14. Create a Topic 
 
-Create a Topic
-
+```
 cd /kafka/bin
-
-./kafka-topics.sh --zookeeper localhost:2181, localhost:2181, localhost:2182 --create --topic TestTopic --replication-factor 1 --partitions 2 
+```
+```
 ./kafka-topics.sh --bootstrap-server 127.0.0.1:9092 --create --topic TestTopic --replication-factor 1 --partitions 2 
+```
 
 
-To list the topics:
+15. To list the topics
 
+```
 ./kafka-topics.sh --list --bootstrap-server 127.0.0.1:9092
+```
 
 
-To produce messages:
+16. To produce messages
 
+```
 ./kafka-console-producer.sh --broker-list 127.0.0.1:9092 --topic TestTopic
+```
 
 
-To consume those messages:
-
+17. To consume those messages
+    
+```
 ./kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --opic TestTopic --from-beginning
+```
