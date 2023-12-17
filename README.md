@@ -175,7 +175,8 @@ systemctl status zookeeper1.service
 ```
 systemctl stop zookeeper1.service
 ```
- 
+
+![ZOOKEEPER_SERVICE](https://github.com/Pavan-1997/Kafka_Setup_Single-Node-Cluster/assets/32020205/465b19d3-c0b0-4272-8a5f-5c63efe6b90d)
 
 Similarily create service for Zookeeper2 and Zookeeper3
 
