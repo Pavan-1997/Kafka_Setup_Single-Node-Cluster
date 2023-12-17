@@ -257,3 +257,5 @@ cd /kafka/bin
 ```
 ./kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --opic TestTopic --from-beginning
 ```
+
+![KAFKA_CONSUME_MESSAGES](https://github.com/Pavan-1997/Kafka_Setup_Single-Node-Cluster/assets/32020205/fb9a17e7-66fa-4d60-b07f-49cb170a803a)
