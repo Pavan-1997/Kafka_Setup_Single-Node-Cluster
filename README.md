@@ -8,15 +8,24 @@
 sudo apt install default-jre
 ```
 
-Producer - Subscriber
 
+2. Download the Binary tar file for the Kafka not the Source
+   
+```
 wget https://downloads.apache.org/kafka/3.6.1/kafka-3.6.1-src.tgz (Source)
+```
+```
 wget https://downloads.apache.org/kafka/3.6.1/kafka_2.13-3.6.1.tgz (Binary)
+```
 
+
+3. Extract the tar file and Rename It for ease of access
+```
 tar -xvf kafka-3.6.1-src.tgz
-
+```
+```
 mv kafka-3.6.1-src kafka 
-
+```
 
 
 Create 3 config files for 3 Zookeeper instances
