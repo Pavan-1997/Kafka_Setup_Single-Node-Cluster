@@ -45,8 +45,8 @@ cp zookeeper1.properties zookeeper3.properties
 ```
 
 
-5. Create the data directory for all the 3 Zookeeper instance to store the data
-`WD - Working Directory`
+5. Create the data directory for all the 3 Zookeeper instance to store the data `WD - Working Directory`
+   
 ```
 mkdir -p /WD/kafka/data/zookeeper1
 ```
@@ -65,17 +65,20 @@ echo 1 > /WD/kafka/data/zookeeper1/myid
 ```
 ```
 echo 2 > /WD/kafka/data/zookeeper2/myid
-
+```
+```
 echo 3 > /WD/kafka/data/zookeeper3/myid
+```
 
 
-Edit Zookeeper properties files use the same for all the 3 (Change happens in dataDir and clientPort feilds)
+7. Edit Zookeeper properties files use the same for all the 3 (Change happens in dataDir and clientPort feilds)
 
-dataDir= /kafka/data/zookeeper1
-clientPort=2181
+`dataDir= /kafka/data/zookeeper1`
 
-Test server config
+`clientPort=2181`
 
+Now we will also add Test server config in the same properties file
+```
 tickTime=2000
 initLimit=5
 syncLimit=2
@@ -83,11 +86,16 @@ server.1=localhost:2887:3887
 server.2=localhost:2888:3888
 server.3=localhost:2889:3889
 maxClientCnxns=0
+```
 
+Use below copy commands to do for other Zookkeeper instances but chnage happens in dataDir and clientPort fields
+
+```
 cp zookeeper1.properties zookeeper2.properties
-
+```
+```
 cp zookeeper1.properties zookeeper3.properties
-
+```
 
 Start the Zookeeper
 
