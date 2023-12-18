@@ -18,8 +18,7 @@ Data Transfer Considerations:
 Kafka Origin:
 
 - LinkedIn discovered in Leo webpages by connecting to backend DB
-
-Service Oriented Architechture 
+- Service Oriented Architechture 
 
 Custom Datapipeline - Stream, Queuing
 
