@@ -29,25 +29,21 @@ Kafka Origin:
 Kafka: Distributed Stream Platform
 
 - We want to publish or subscribe the stream of records
-- You can process / modify the records (data, key-values, time stamp)
+- You can process/modify the records (data, key values, timestamp)
 - Topics- collection of records
 - Fast, reliable, performance, durable and scalable
 - Store streams of data in Fault Tolerant way
-- Single machine / Cluster - collection of Kafka brokers
-- Kafka competitors are AMQP which is opensource, Rabbit MQ is a asynchronous and opensource, JMS, Amazon Kinesis, ActiveMQ, IBM MQ, Microsoft MQ
-
-Used in E-commerce, Risk Management, Market Analysis, Monitoring network activities we use Kafka
+- Single machine / Cluster - a collection of Kafka brokers
+- Kafka competitors are AMQP which is open source, Rabbit MQ is an asynchronous and open source, JMS, Amazon Kinesis, ActiveMQ, IBM MQ, Microsoft MQ
+- Used in E-commerce, Risk Management, Market Analysis, and Monitoring network activities we use Kafka
 
 
 Topics: 
 
-Its a stream of data
-
-Its identified by its name
-
-Any number of topics
-
-It can have any number of partitions and starts with 0
+- Its a stream of data
+- Its identified by its name
+- Any number of topics
+- It can have any number of partitions and starts with 0
 
 Every message in partition for a topic gets an incremental ID which is called Offset 
 
