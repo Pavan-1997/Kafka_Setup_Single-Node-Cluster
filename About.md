@@ -1,4 +1,4 @@
-Types of Data:
+## Types of Data:
 
 - Structured Data - Organised data
 - Semi-Structured Data - JSON, XML
@@ -7,7 +7,7 @@ Types of Data:
 
 Collect Data -> Tranfer Data -> Store Data -> Analyse
 
-Data Transfer Considerations:
+## Data Transfer Considerations:
 
 - Reliability
 - Speed
@@ -15,7 +15,7 @@ Data Transfer Considerations:
 - Scalability
 - Security 
 
-Kafka Origin:
+## Kafka Origin:
 
 - LinkedIn discovered in Leo webpages by connecting to backend DB
 - Service Oriented Architechture
@@ -26,7 +26,7 @@ Kafka Origin:
 - Many organizations started using Kafka
 
 
-Kafka: Distributed Stream Platform
+## Kafka: Distributed Stream Platform
 
 - We want to publish or subscribe the stream of records
 - You can process/modify the records (data, key values, timestamp)
@@ -36,36 +36,32 @@ Kafka: Distributed Stream Platform
 - Single machine / Cluster - a collection of Kafka brokers
 - Kafka competitors are AMQP which is open source, Rabbit MQ is an asynchronous and open source, JMS, Amazon Kinesis, ActiveMQ, IBM MQ, Microsoft MQ
 - Used in E-commerce, Risk Management, Market Analysis, and Monitoring network activities we use Kafka
+- Producers and Consumers are automatically recovered
+- Every Kafka server is a Bootstrap server like connected to one server which means your connected to all the servers
+- Kafka client conects to Broker0 and requests a metadata requests
 
 
-Topics: 
+## Topics: 
 
 - Its a stream of data
 - Its identified by its name
 - Any number of topics
 - It can have any number of partitions and starts with 0
-
-Every message in partition for a topic gets an incremental ID which is called Offset 
-
-Every partition is independent to itself 
-
-Data in topic remains for 7 days by default 
-
-Data is immutable in Partition
-
-Day is assigned randomly to a partition
+- Every message in the partition for a topic gets an incremental ID which is called Offset
+- Every partition is independent to itself
+- Data in topic remains for 7 days by default
+- Data is immutable in Partition
+- Data is assigned randomly to a partition
 
 
-Brokers:
+## Brokers:
 
-Broker is a server
+- Broker is a server
+- Its not valid to have 3 brokers in one server for a production
+- We identify broker with a number like Broker0, Broker1 ....
+- If we connect to one broker in a cluster then it automatically connects to all brokers in the same cluster
 
-Its not valid to have 3 brokers in one server for a production 
-
-We identify broker with a number like Broker0, Broker1 ....
-
-If we connect to one broker in a cluster then it automatically connects to all brokers in the same cluster
-
+```
 Topic A -> 3 Partitions
 Topic B -> 2 Partitions
 
@@ -77,18 +73,17 @@ Part.4		Part.5
 
 TopicB	TopicB
 Part.0	Part.1
+```
 
+## Topic Replication Factor:
 
-Topic Replication Factor:
+- `>1`
+- Normal its 2
+- 3 which is good
+- If one broker is down then another broker can serve the request
+- Replication factor =2 -> If Broker1 is down then topicA Part.0 and Part.1 are available in Broker0 and Broker2
 
->1 
-
-Normal its 2 
-
-3 which is good 
-
-If one broker is down then another broker can server the request
-
+```
 Broker0 Broker1 Broker2 
 
 TopicA	TopicA	TopicA
@@ -96,69 +91,46 @@ Part.0	Part.1	Part.1
 	
 	TopicA
 	Part.0	
-
-Replication factor =2 -> If Broker1 is down then topicA Part.0 and Part.1 are available in Broker0 and Broker2
-
-
-Leader for Partition:
-
-Leader is elected by Zookeeper
-
-Any one Partition in a topic for a broker can be leader which can receive and server data for the parition
-
-ISR (In Sync Replicas) in the Partition recieves the next data immediate from the leader 
+```
 
 
-Producers:
+## Leader for Partition:
 
-Write data to topics 
-
-No programming required to explicit give 
-
-It will do load balancing for the messages in Topics 
-
-It will be have acknowledgements (acks=0 - no waiting for acknowledgement which have chances for data loss) (acks=1 - default will wait for acknowledgement from the leader partition, limited data loss)
-
-It have message keys which means a message is sent along with key (num, string) which is sent to particular Broker1 - TopicA - Partition0 only which reduces the latency
+- Leader is elected by Zookeeper
+- Anyone Partition in a topic for a broker can be leader which can receive and server data for the parition
+- ISR (In Sync Replicas) in the Partition recieves the next data immediate from the leader 
 
 
-Consumers:
+## Producers:
 
-Consumers read data from the topics 
-
-One consumer can read data from multiple brokers 
-
-Consumers read data in consumer groups which have consumers in it 
-
-
-Consumer Offsets:
-
-If a disconnect happens during the consumer down it commits the offset and tries to read messages from it when the consumer is back online 
-
-Delivery symantics - At most once, At least once, Exactly once
+- Write data to topics
+- No programming required to explicit give
+- It will do load balancing for the messages in Topics
+- It will have acknowledgements (acks=0 - no waiting for acknowledgement which have chances for data loss) (acks=1 - default will wait for acknowledgement from the leader partition, limited data loss)
+- It have message keys which means a message is sent along with key (num, string) which is sent to particular Broker1 - TopicA - Partition0 only which reduces the latency
 
 
+## Consumers:
 
-Producers and Consumers are automatically recovered
-
-Every Kafka server is a Bootstrap server like connected to one server which means your connected to all the servers 
-
-Kafka client conects to Broker0 and requests a metadata requests
+- Consumers read data from the topics
+- One consumer can read data from multiple brokers
+- Consumers read data in consumer groups which have consumers in it 
 
 
-Zookeeper:
+## Consumer Offsets:
 
-Manage all the brokers 
+- If a disconnect happens during the consumer down it commits the offset and tries to read messages from it when the consumer is back online
+- Delivery symantics - At most once, At least once, Exactly once
 
-Broker Leader elections are occured by help of Zookeeper
 
-It sends notifications if there is a change like a broker is not wokring or topic is deleted 
+## Zookeeper:
 
-Kafka cant work without Zookeeper
-
-It operates in odd number of Servers (3 compulsory)
-
-Zookepers has leaders and followers
+- Manage all the brokers
+- Broker Leader elections are occured by help of Zookeeper
+- It sends notifications if there is a change like a broker is not wokring or topic is deleted
+- Kafka cant work without Zookeeper
+- It operates in odd number of Servers (3 compulsory)
+- Zookepers has leaders and followers
 
 
 
