@@ -22,8 +22,7 @@ Kafka Origin:
 - Custom Datapipeline - Stream, Queuing
 - Kafka - Distributed System
 - Later became opensource in 2011
-
-Later was adapted by Apache in incubator at 2012
+- Later was adapted by Apache in incubator at 2012
 
 Many orgabizations started using Kafka
 
