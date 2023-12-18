@@ -1,7 +1,7 @@
 ## Types of Data:
   
 - Structured Data - Organised data 
-- Semi-Structured Data - JSON, XML
+- Semi-Structured Data - JSON, XML 
 - Un-Structured Data - No structure defined
 - Quasi Structured - Textual data 
 
