@@ -13,8 +13,7 @@ Data Transfer Considerations:
 - Speed
 - Availability
 - Scalability
-
-Security 
+- Security 
 
 
 Origin:
