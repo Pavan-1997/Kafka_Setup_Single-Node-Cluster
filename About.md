@@ -33,10 +33,8 @@ Kafka: Distributed Stream Platform
 - Topics- collection of records
 - Fast, reliable, performance, durable and scalable
 - Store streams of data in Fault Tolerant way
-
-Single machine / Cluster - collection of Kafka brokers
-
-Kafka competitors are AMQP which is opensource, Rabbit MQ is a asynchronous and opensource, JMS, Amazon Kinesis, ActiveMQ, IBM MQ, Microsoft MQ
+- Single machine / Cluster - collection of Kafka brokers
+- Kafka competitors are AMQP which is opensource, Rabbit MQ is a asynchronous and opensource, JMS, Amazon Kinesis, ActiveMQ, IBM MQ, Microsoft MQ
 
 Used in E-commerce, Risk Management, Market Analysis, Monitoring network activities we use Kafka
 
