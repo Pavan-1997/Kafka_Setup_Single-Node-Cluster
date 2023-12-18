@@ -29,12 +29,10 @@ Kafka Origin:
 Kafka: Distributed Stream Platform
 
 - We want to publish or subscribe the stream of records
-
-You can process / modify the records (data, key-values, time stamp) (Topics- collection of records)
-
-Fast, reliable, performance, durable and scalable
-
-Store streams of data in Fault Tolerant way
+- You can process / modify the records (data, key-values, time stamp)
+- Topics- collection of records
+- Fast, reliable, performance, durable and scalable
+- Store streams of data in Fault Tolerant way
 
 Single machine / Cluster - collection of Kafka brokers
 
