@@ -12,8 +12,7 @@ Data Transfer Considerations:
 - Reliability
 - Speed
 - Availability
-
-Scalability
+- Scalability
 
 Security 
 
