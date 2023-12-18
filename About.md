@@ -7,8 +7,7 @@ Types of Data:
 
 Collect Data -> Tranfer Data -> Store Data -> Analyse
 
-
-Data Transfer Parameters:
+Data Transfer Considerations:
 
 Reliability
 
