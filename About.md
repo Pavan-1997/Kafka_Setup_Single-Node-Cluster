@@ -21,15 +21,14 @@ Kafka Origin:
 - Service Oriented Architechture
 - Custom Datapipeline - Stream, Queuing
 - Kafka - Distributed System
-- Later became opensource in 2011
-- Later was adapted by Apache in incubator at 2012
-
-Many orgabizations started using Kafka
+- Later became open source in 2011
+- Later was adapted by Apache and kept in incubator at 2012
+- Many organizations started using Kafka
 
 
 Kafka: Distributed Stream Platform
 
-We want to publish or subscribe the stream of records
+- We want to publish or subscribe the stream of records
 
 You can process / modify the records (data, key-values, time stamp) (Topics- collection of records)
 
