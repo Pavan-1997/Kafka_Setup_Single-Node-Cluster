@@ -15,10 +15,9 @@ Data Transfer Considerations:
 - Scalability
 - Security 
 
+Kafka Origin:
 
-Origin:
-
-LinkedIn discovered in Leo webpages by connecting to backend DB
+- LinkedIn discovered in Leo webpages by connecting to backend DB
 
 Service Oriented Architechture 
 
