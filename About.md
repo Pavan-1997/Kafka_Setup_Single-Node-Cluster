@@ -20,9 +20,8 @@ Kafka Origin:
 - LinkedIn discovered in Leo webpages by connecting to backend DB
 - Service Oriented Architechture
 - Custom Datapipeline - Stream, Queuing
-- Kafka - Distributed System 
-
-Later became opensource in 2011
+- Kafka - Distributed System
+- Later became opensource in 2011
 
 Later was adapted by Apache in incubator at 2012
 
