@@ -10,8 +10,7 @@ Collect Data -> Tranfer Data -> Store Data -> Analyse
 Data Transfer Considerations:
 
 - Reliability
-
-Speed
+- Speed
 
 Availability
 
