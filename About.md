@@ -1,4 +1,6 @@
-Structured Data - Organised data
+Types of Data:
+
+- Structured Data - Organised data
 
 Semi-Structured Data - JSON, XML
 
